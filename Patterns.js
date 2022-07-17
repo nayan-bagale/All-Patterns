@@ -104,4 +104,50 @@ let pattern8 = (n) =>{
     console.log(string)
 }
 
-pattern8(n)
+let pattern9 = (n) =>{
+    for(let row = 1; row <= n; row++){ 
+        let space;
+        for(space = 1; space < row; space++ ){
+            string += ' '
+        }
+        for(let col = space; col <= n; col++){
+            string += '*'
+        }
+        for(let ex = n-1; ex >= row; ex--){
+            string += '*'
+        }
+        
+        string += '\n'
+    }
+    console.log(string)
+}
+
+let pattern10 = (n) =>{
+    for(let row = 1; row <= n; row++){ 
+        let space;
+        for(space = n; space > row; space--){
+            string += ' '
+        }
+        for(let col = 1; col <= row; col++){
+            string += ' *'
+        }
+        string += '\n'
+    }
+    console.log(string)
+}
+
+let pattern11 = (n) =>{
+    for(let row = 1; row <= n; row++){ 
+        let space;
+        for(space = 1; space < row; space++){
+            string += ' '
+        }
+        for(let col = n; col >= row; col--){
+            string += ' *'
+        }
+        string += '\n'
+    }
+    console.log(string)
+}
+
+pattern11(n)
