@@ -4,7 +4,7 @@ var string = '';
 let pattern1 = (n) =>{
     for(let row = 1; row <= n; row++){
         for(let col = 1; col <= n; col++){
-            string += '* '
+            string += '*'
         }
         string += '\n'
     }
@@ -46,11 +46,11 @@ let pattern5 = (n) =>{
     for(let row = 1; row <= (n*2)-1 ; row++){
         if( row <= n ){
             for(let col = 1; col <= row; col++){
-                string += '* '
+                string += '*'
             }
         }else{
             for(let col = (n*2)-1; col >= row; col--){
-                string += '* '
+                string += '*'
             }      
         }
         string += '\n'
@@ -150,4 +150,4 @@ let pattern11 = (n) =>{
     console.log(string)
 }
 
-pattern11(n)
+pattern11(5)
