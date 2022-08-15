@@ -176,4 +176,21 @@ let pattern12 = (n) => {
     }
     console.log(string)
 }
-pattern12(5)
+
+let pattern13 = (n) => {
+    for(row = 1; row<=n; row++){
+        for(let col = 1; col <= n*2-1; col++){
+            if(row == 1 & col == n){
+                string += '*'
+                break
+            }
+            else if(row == n) string += '*'
+            else if(col == n-row+1 || col == row+n-1) string += '*'  
+            else string += ' '
+        }
+        string += '\n'
+    }
+    console.log(string)
+}
+
+pattern13(10)
