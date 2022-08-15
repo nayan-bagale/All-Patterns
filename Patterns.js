@@ -150,4 +150,30 @@ let pattern11 = (n) =>{
     console.log(string)
 }
 
-pattern11(5)
+let pattern12 = (n) => {
+    for(let row = 1; row<=n*2; row++){
+        if(row<=n){
+            let space;
+            for(space = 1; space < row; space++){
+                string += ' '
+            }
+            for(let col = n; col >= row; col--){
+                string += ' *'
+            }
+            string += '\n'
+
+        }else{
+            let space;
+            for(space = n; space > row-n; space--){
+                string += ' '
+            }
+            for(let col = 1; col <= row-n; col++){
+                string += ' *'
+            }
+            string += '\n'
+        }
+    
+    }
+    console.log(string)
+}
+pattern12(5)
