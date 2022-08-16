@@ -209,4 +209,30 @@ let pattern14 = (n) => {
     console.log(string)
 }
 
-pattern14(10)
+let pattern15 = (n) => {
+    for(row = 1; row<=n*2-1; row++){
+        if(row<n){
+            for(let col = 1; col <= n*2-1; col++){
+                if(row == 1 & col == n){
+                    string += '*'
+                    break
+                }
+                else if(col == n-row+1 || col == row+n-1) string += '*'  
+                else string += ' '
+            }
+        }else{
+            for(let col = 1; col <= n*2-1; col++){
+                if(row == n*2-1 & col == n){
+                    string += '*'
+                    break
+                }
+                else if(col == (row-n+1) || col == (n*2-1)-row+n) string += '*'  
+                else string += ' '
+            }
+        }
+        string += '\n'
+    }
+    console.log(string)
+}
+
+pattern15(5)
